@@ -110,7 +110,22 @@ console.log(averageGrade([8, 9, 4, 6, 10]));
 // Zorg ervoor dat het gemiddelde cijfer dat wordt teruggegeven uit de functie netjes wordt afgerond op twee decimalen.
 // Tip: Google is your best friend!
 
+function round(num) {
+    let m = Number((Math.abs(num) * 100).toPrecision(15));
+    return Math.round(m) / 100 * Math.sign(num);
+}
 
+function averageGradeAfgerond(cijfers) {
+    let total = 0;
+
+    for (let i = 0; i < cijfers.length; i++) {
+        total = total + cijfers[i];
+    }
+    let gemiddelde = total / cijfers.length;
+    return round(gemiddelde);
+}
+
+console.log(averageGradeAfgerond(grades));
 
 
 /* Bonusopdracht: hoogste cijfer */
