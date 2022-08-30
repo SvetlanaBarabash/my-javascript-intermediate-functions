@@ -38,6 +38,24 @@ console.log(count);
 // cumLaude([6, 4, 5]) geeft 0
 // cumLaude([8, 9, 4, 6, 10]) geeft 3
 
+    function cumLaude(cijfers) {
+        let count = 0;
+
+        for(let i = 0; i < cijfers.length; i++) {
+
+            const value = cijfers[i];
+            if (value >= 8) {
+                count++;
+
+            }
+        }
+
+        return count
+    }
+
+    console.log(cumLaude(grades));
+    console.log(cumLaude([6, 4, 5]));
+    console.log(cumLaude([8, 9, 4, 6, 10]));
 
 
 
