@@ -91,6 +91,20 @@ console.log(gemiddelde);
 // averageGrade([6, 4, 5]) geeft xxxx
 // averageGrade([8, 9, 4, 6, 10]) geeft xxxx
 
+function averageGrade(cijfers) {
+    let total = 0;
+
+    for(let i = 0; i < cijfers.length; i++) {
+        total = total + cijfers[i];
+    }
+
+    return total / cijfers.length;
+
+}
+console.log(averageGrade(grades));
+console.log(averageGrade([6, 4, 5]));
+console.log(averageGrade([8, 9, 4, 6, 10]));
+
 
 /* 2c: Afronden op twee decimalen */
 // Zorg ervoor dat het gemiddelde cijfer dat wordt teruggegeven uit de functie netjes wordt afgerond op twee decimalen.
