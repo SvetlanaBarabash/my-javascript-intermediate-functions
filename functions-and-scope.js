@@ -70,7 +70,16 @@ console.log(count);
 // Log het antwoord in de terminal.
 
 // ---- Verwachte uitkomst: 6.642857142857143
+let total = 0;
 
+for(let i = 0; i < grades.length; i++) {
+    total = total + grades[i];
+}
+
+
+let gemiddelde = total / grades.length;
+
+console.log(gemiddelde);
 
 /* 2b: Omschrijven tot een herbruikbare functie */
 // Schrijf een functie genaamd averageGrade, die een array van cijfers verwacht (zoals grades) en het gemiddelde cijfer teruggeeft. Gebruik hiervoor jouw antwoord van 2a.
