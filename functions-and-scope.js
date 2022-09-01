@@ -138,6 +138,15 @@ console.log(averageGradeAfgerond(grades));
 // Log het antwoord in de terminal.
 
 // ---- Verwachte uitkomst: 9
+let num = 0;
+
+for(let i = 0; i < grades.length; i++) {
+    if (grades[i] > num) {
+        num = grades[i];
+    }
+}
+
+console.log(num);
 
 
 /* 3b: Omschrijven tot een herbruikbare functie */
@@ -149,3 +158,18 @@ console.log(averageGradeAfgerond(grades));
 // highestGrade(grades) geeft 9
 // highestGrade([6, 4, 5]) geeft 6
 // highestGrade([8, 9, 4, 6, 10]) geeft 10
+
+function highestGrade(cijfers) {
+    let num = 0;
+
+    for (let i = 0; i < cijfers.length; i++) {
+        if (cijfers[i] > num) {
+            num = cijfers[i];
+        }
+    }
+    return num;
+}
+
+console.log(highestGrade(grades));
+console.log(highestGrade([6, 4, 5]));
+console.log(highestGrade([8, 9, 4, 6, 10]));
